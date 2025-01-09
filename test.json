@@ -1,0 +1,362 @@
+{
+  "type": "manifest",
+  "hasThumbnail": "true",
+  "status": "success",
+  "progress": "complete",
+  "region": "US",
+  "urn": "dXJuOmFkc2sud2lwcHJvZDpmcy5maWxlOnZmLjZsRThNSjZuU0ZTQTNhUUczaUJWMkE_dmVyc2lvbj0x",
+  "version": "1.0",
+  "derivatives": [
+    {
+      "name": "Technical_school-current_m 2.rvt",
+      "hasThumbnail": "true",
+      "status": "success",
+      "progress": "complete",
+      "messages": [
+        {
+          "type": "warning",
+          "code": "Revit-MissingLink",
+          "message": [
+            "<message>Missing link files: <ul>{0}</ul></message>",
+            "Newspaper.jpg"
+          ]
+        }
+      ],
+      "properties": {
+        "Document Information": {
+          "RVTVersion": "2023",
+          "Project Name": "Project Name",
+          "Project Number": "Project Number",
+          "Author": "",
+          "Project Address": "Enter address here",
+          "Project Issue Date": "Issue Date",
+          "Project Status": "Project Status",
+          "Building Name": "",
+          "Client Name": "Owner",
+          "Organization Name": "",
+          "Organization Description": ""
+        },
+        "selfDocumentIdentity": {
+          "instanceId": "68a101ae-fa85-43bd-b67b-c9dfce29b3ea",
+          "revitNumberOfSaves": 17
+        }
+      },
+      "extractorVersion": "2026.7.2.1971",
+      "outputType": "svf",
+      "overrideOutputType": "svf2",
+      "children": [
+        {
+          "guid": "6fac95cb-af5d-3e4f-b943-8a7f55847ff1",
+          "type": "resource",
+          "role": "Autodesk.CloudPlatform.PropertyDatabase",
+          "urn": "urn:adsk.viewing:fs.file:dXJuOmFkc2sud2lwcHJvZDpmcy5maWxlOnZmLjZsRThNSjZuU0ZTQTNhUUczaUJWMkE_dmVyc2lvbj0x/output/Resource/model.sdb",
+          "mime": "application/autodesk-db",
+          "status": "success"
+        },
+        {
+          "guid": "a4aac952-a3f4-031c-4113-b2d9ac2d0de6",
+          "type": "resource",
+          "role": "Autodesk.AEC.ModelData",
+          "urn": "urn:adsk.viewing:fs.file:dXJuOmFkc2sud2lwcHJvZDpmcy5maWxlOnZmLjZsRThNSjZuU0ZTQTNhUUczaUJWMkE_dmVyc2lvbj0x/output/Resource/AECModelData.json",
+          "mime": "application/json",
+          "status": "success"
+        },
+        {
+          "guid": "01e14f6e-761f-6dfe-4acd-30c9ba927530",
+          "type": "geometry",
+          "role": "3d",
+          "name": "{3D}",
+          "viewableID": "9e597f98-694d-4ada-b8ef-0e7459e0b930-00029266",
+          "phaseNames": "New Construction",
+          "phaseIds": "c8c9591b-fcaf-44ac-94c8-6e357de0a0cf-000153b1",
+          "status": "success",
+          "hasThumbnail": "true",
+          "progress": "complete",
+          "children": [
+            {
+              "guid": "9e597f98-694d-4ada-b8ef-0e7459e0b930-00029266",
+              "type": "view",
+              "role": "3d",
+              "name": "{3D}",
+              "status": "success",
+              "progress": "complete",
+              "camera": [
+                1144.7630615234375, -936.5005493164062, 664.1793823242188,
+                141.90737915039062, 12.19140625, 16.27448081970215,
+                -0.308644562959671, 0.291974812746048, 0.905256450176239,
+                2.090852737426758, 0, 1, 1
+              ],
+              "sectionBox": [
+                -507.01907457681943, -206.6374798344367, -26.55127707918777,
+                509.62389026180256, 232.02170257926178, 26.55127707918777
+              ],
+              "sectionBoxTransform": [
+                1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 140.60496520996094,
+                -0.500701904296875, 18.137524617443425, 1
+              ]
+            },
+            {
+              "guid": "65059ff2-82a8-cf30-f536-33f1d69ed970",
+              "type": "resource",
+              "role": "graphics",
+              "urn": "urn:adsk.viewing:fs.file:dXJuOmFkc2sud2lwcHJvZDpmcy5maWxlOnZmLjZsRThNSjZuU0ZTQTNhUUczaUJWMkE_dmVyc2lvbj0x/output/Resource/3D View/9e597f98-694d-4ada-b8ef-0e7459e0b930-00029266/{3D}.svf",
+              "mime": "application/autodesk-svf"
+            },
+            {
+              "guid": "cecb20d9-6563-8e97-6c09-81b96a229b37",
+              "type": "resource",
+              "role": "thumbnail",
+              "urn": "urn:adsk.viewing:fs.file:dXJuOmFkc2sud2lwcHJvZDpmcy5maWxlOnZmLjZsRThNSjZuU0ZTQTNhUUczaUJWMkE_dmVyc2lvbj0x/output/Resource/3D View/9e597f98-694d-4ada-b8ef-0e7459e0b930-00029266/{3D}1.png",
+              "resolution": [100, 100],
+              "mime": "image/png",
+              "status": "success"
+            },
+            {
+              "guid": "d4c94f9e-82b5-0dee-43ea-5783d1a16ff4",
+              "type": "resource",
+              "role": "thumbnail",
+              "urn": "urn:adsk.viewing:fs.file:dXJuOmFkc2sud2lwcHJvZDpmcy5maWxlOnZmLjZsRThNSjZuU0ZTQTNhUUczaUJWMkE_dmVyc2lvbj0x/output/Resource/3D View/9e597f98-694d-4ada-b8ef-0e7459e0b930-00029266/{3D}2.png",
+              "resolution": [200, 200],
+              "mime": "image/png",
+              "status": "success"
+            },
+            {
+              "guid": "494f4106-04cc-f26e-a33e-e318c42eac4b",
+              "type": "resource",
+              "role": "thumbnail",
+              "urn": "urn:adsk.viewing:fs.file:dXJuOmFkc2sud2lwcHJvZDpmcy5maWxlOnZmLjZsRThNSjZuU0ZTQTNhUUczaUJWMkE_dmVyc2lvbj0x/output/Resource/3D View/9e597f98-694d-4ada-b8ef-0e7459e0b930-00029266/{3D}4.png",
+              "resolution": [400, 400],
+              "mime": "image/png",
+              "status": "success"
+            }
+          ]
+        },
+        {
+          "guid": "e1dc779e-2bf7-2aa6-a0b4-c30cff4d7fa9",
+          "type": "geometry",
+          "role": "3d",
+          "name": "New Construction",
+          "viewableID": "c884ae1b-61e7-4f9d-0001-719e20b22d0b-00059cf7",
+          "phaseNames": "New Construction",
+          "phaseIds": "c8c9591b-fcaf-44ac-94c8-6e357de0a0cf-000153b1",
+          "status": "success",
+          "hasThumbnail": "true",
+          "progress": "complete",
+          "children": [
+            {
+              "guid": "c884ae1b-61e7-4f9d-0001-719e20b22d0b-00059cf7",
+              "type": "view",
+              "role": "3d",
+              "name": "New Construction",
+              "status": "success",
+              "progress": "complete",
+              "camera": [
+                1047.162353515625, -907.05810546875, 924.038818359375,
+                140.60496520996094, -0.500701904296875, 17.48135757446289,
+                -0.40824830532073975, 0.40824830532073975, 0.8164966106414795,
+                1.6327708959579468, 0, 1, 1
+              ]
+            },
+            {
+              "guid": "257a7f1e-cf0c-67a3-d87d-3652502033f0",
+              "type": "resource",
+              "role": "graphics",
+              "urn": "urn:adsk.viewing:fs.file:dXJuOmFkc2sud2lwcHJvZDpmcy5maWxlOnZmLjZsRThNSjZuU0ZTQTNhUUczaUJWMkE_dmVyc2lvbj0x/output/Resource/3D View/08f99ae5-b8be-4f8d-881b-128675723c10/08a9a6e0-c015-4f93-9797-12f2d16c2dda-00059cf7/New Construction.svf",
+              "mime": "application/autodesk-svf"
+            },
+            {
+              "guid": "e014afb8-1b10-38b1-5030-cf8600e675f9",
+              "type": "resource",
+              "role": "thumbnail",
+              "urn": "urn:adsk.viewing:fs.file:dXJuOmFkc2sud2lwcHJvZDpmcy5maWxlOnZmLjZsRThNSjZuU0ZTQTNhUUczaUJWMkE_dmVyc2lvbj0x/output/Resource/3D View/08f99ae5-b8be-4f8d-881b-128675723c10/08a9a6e0-c015-4f93-9797-12f2d16c2dda-00059cf7/New Construction1.png",
+              "resolution": [100, 100],
+              "mime": "image/png",
+              "status": "success"
+            },
+            {
+              "guid": "640ced0f-bedf-6ebb-eeb3-41fbbd8a90d4",
+              "type": "resource",
+              "role": "thumbnail",
+              "urn": "urn:adsk.viewing:fs.file:dXJuOmFkc2sud2lwcHJvZDpmcy5maWxlOnZmLjZsRThNSjZuU0ZTQTNhUUczaUJWMkE_dmVyc2lvbj0x/output/Resource/3D View/08f99ae5-b8be-4f8d-881b-128675723c10/08a9a6e0-c015-4f93-9797-12f2d16c2dda-00059cf7/New Construction2.png",
+              "resolution": [200, 200],
+              "mime": "image/png",
+              "status": "success"
+            },
+            {
+              "guid": "729cd292-a661-e705-116e-d1d3406c1a73",
+              "type": "resource",
+              "role": "thumbnail",
+              "urn": "urn:adsk.viewing:fs.file:dXJuOmFkc2sud2lwcHJvZDpmcy5maWxlOnZmLjZsRThNSjZuU0ZTQTNhUUczaUJWMkE_dmVyc2lvbj0x/output/Resource/3D View/08f99ae5-b8be-4f8d-881b-128675723c10/08a9a6e0-c015-4f93-9797-12f2d16c2dda-00059cf7/New Construction4.png",
+              "resolution": [400, 400],
+              "mime": "image/png",
+              "status": "success"
+            }
+          ],
+          "isMasterView": true
+        },
+        {
+          "guid": "951810cc-7a73-4765-9179-f5744ba5d821-0003406e",
+          "type": "geometry",
+          "role": "2d",
+          "name": "A1 - Floor Plan",
+          "viewableID": "951810cc-7a73-4765-9179-f5744ba5d821-0003406e",
+          "phaseNames": "New Construction",
+          "phaseIds": "c8c9591b-fcaf-44ac-94c8-6e357de0a0cf-000153b1",
+          "status": "success",
+          "progress": "complete",
+          "isVectorPDF": true,
+          "properties": {
+            "Print Setting": {
+              "Layout": "Landscape",
+              "Paper size": "ISO A4, 210 x 297 mm"
+            }
+          },
+          "units": "mm",
+          "hasThumbnail": "true",
+          "children": [
+            {
+              "guid": "1d0d6f28-7da6-06f7-8b3f-a3e2e1e3439c",
+              "type": "resource",
+              "role": "thumbnail",
+              "urn": "urn:adsk.viewing:fs.file:dXJuOmFkc2sud2lwcHJvZDpmcy5maWxlOnZmLjZsRThNSjZuU0ZTQTNhUUczaUJWMkE_dmVyc2lvbj0x/output/Resource/Sheet/951810cc-7a73-4765-9179-f5744ba5d821-0003406e/pdf/A1 - Floor Plan1.png",
+              "resolution": [100, 100],
+              "mime": "image/png",
+              "status": "success"
+            },
+            {
+              "guid": "4694638d-475e-fa38-22c5-fd9b43c7dda3",
+              "type": "resource",
+              "role": "thumbnail",
+              "urn": "urn:adsk.viewing:fs.file:dXJuOmFkc2sud2lwcHJvZDpmcy5maWxlOnZmLjZsRThNSjZuU0ZTQTNhUUczaUJWMkE_dmVyc2lvbj0x/output/Resource/Sheet/951810cc-7a73-4765-9179-f5744ba5d821-0003406e/pdf/A1 - Floor Plan2.png",
+              "resolution": [200, 200],
+              "mime": "image/png",
+              "status": "success"
+            },
+            {
+              "guid": "9cf0d028-5717-9d60-3796-eb2a0228de45",
+              "type": "resource",
+              "role": "thumbnail",
+              "urn": "urn:adsk.viewing:fs.file:dXJuOmFkc2sud2lwcHJvZDpmcy5maWxlOnZmLjZsRThNSjZuU0ZTQTNhUUczaUJWMkE_dmVyc2lvbj0x/output/Resource/Sheet/951810cc-7a73-4765-9179-f5744ba5d821-0003406e/pdf/A1 - Floor Plan4.png",
+              "resolution": [400, 400],
+              "mime": "image/png",
+              "status": "success"
+            },
+            {
+              "guid": "98e3a7d9-8896-4626-9372-94bd7900bb1b",
+              "type": "resource",
+              "role": "pdf-page",
+              "urn": "urn:adsk.viewing:fs.file:dXJuOmFkc2sud2lwcHJvZDpmcy5maWxlOnZmLjZsRThNSjZuU0ZTQTNhUUczaUJWMkE_dmVyc2lvbj0x/output/Resource/Sheet/951810cc-7a73-4765-9179-f5744ba5d821-0003406e/pdf/A1 - Floor Plan.pdf",
+              "mime": "application/pdf",
+              "status": "success"
+            },
+            {
+              "guid": "6f3f43f2-15e5-444b-bc0b-dc2f07e53df8",
+              "type": "view",
+              "role": "2d",
+              "name": "A1 - Floor Plan",
+              "viewbox": [0, 0, 1187.958, 839.978]
+            }
+          ]
+        },
+        {
+          "guid": "951810cc-7a73-4765-9179-f5744ba5d821-0003407c",
+          "type": "geometry",
+          "role": "2d",
+          "name": "A2 - Sections",
+          "viewableID": "951810cc-7a73-4765-9179-f5744ba5d821-0003407c",
+          "phaseNames": "New Construction",
+          "phaseIds": "c8c9591b-fcaf-44ac-94c8-6e357de0a0cf-000153b1",
+          "status": "success",
+          "progress": "complete",
+          "isVectorPDF": true,
+          "properties": {
+            "Print Setting": {
+              "Layout": "Landscape",
+              "Paper size": "ISO A4, 210 x 297 mm"
+            }
+          },
+          "units": "mm",
+          "hasThumbnail": "true",
+          "children": [
+            {
+              "guid": "d40021e1-b167-1f9f-6fd2-13a0d1c04469",
+              "type": "resource",
+              "role": "thumbnail",
+              "urn": "urn:adsk.viewing:fs.file:dXJuOmFkc2sud2lwcHJvZDpmcy5maWxlOnZmLjZsRThNSjZuU0ZTQTNhUUczaUJWMkE_dmVyc2lvbj0x/output/Resource/Sheet/951810cc-7a73-4765-9179-f5744ba5d821-0003407c/pdf/A2 - Sections1.png",
+              "resolution": [100, 100],
+              "mime": "image/png",
+              "status": "success"
+            },
+            {
+              "guid": "a4f142aa-ae8e-6ca3-7991-2b38aeb9241d",
+              "type": "resource",
+              "role": "thumbnail",
+              "urn": "urn:adsk.viewing:fs.file:dXJuOmFkc2sud2lwcHJvZDpmcy5maWxlOnZmLjZsRThNSjZuU0ZTQTNhUUczaUJWMkE_dmVyc2lvbj0x/output/Resource/Sheet/951810cc-7a73-4765-9179-f5744ba5d821-0003407c/pdf/A2 - Sections2.png",
+              "resolution": [200, 200],
+              "mime": "image/png",
+              "status": "success"
+            },
+            {
+              "guid": "3d2df533-e966-ee2f-9e72-46e5e832bf32",
+              "type": "resource",
+              "role": "thumbnail",
+              "urn": "urn:adsk.viewing:fs.file:dXJuOmFkc2sud2lwcHJvZDpmcy5maWxlOnZmLjZsRThNSjZuU0ZTQTNhUUczaUJWMkE_dmVyc2lvbj0x/output/Resource/Sheet/951810cc-7a73-4765-9179-f5744ba5d821-0003407c/pdf/A2 - Sections4.png",
+              "resolution": [400, 400],
+              "mime": "image/png",
+              "status": "success"
+            },
+            {
+              "guid": "a873a662-1048-48df-b20a-2875347907b8",
+              "type": "resource",
+              "role": "pdf-page",
+              "urn": "urn:adsk.viewing:fs.file:dXJuOmFkc2sud2lwcHJvZDpmcy5maWxlOnZmLjZsRThNSjZuU0ZTQTNhUUczaUJWMkE_dmVyc2lvbj0x/output/Resource/Sheet/951810cc-7a73-4765-9179-f5744ba5d821-0003407c/pdf/A2 - Sections.pdf",
+              "mime": "application/pdf",
+              "status": "success"
+            },
+            {
+              "guid": "214fbed6-0093-4462-adc8-e82e072dded4",
+              "type": "view",
+              "role": "2d",
+              "name": "A2 - Sections",
+              "viewbox": [0, 0, 1187.958, 839.978]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "status": "success",
+      "progress": "complete",
+      "outputType": "thumbnail",
+      "children": [
+        {
+          "guid": "db899ab5-939f-e250-d79d-2d1637ce4565",
+          "type": "resource",
+          "role": "thumbnail",
+          "urn": "urn:adsk.viewing:fs.file:dXJuOmFkc2sud2lwcHJvZDpmcy5maWxlOnZmLjZsRThNSjZuU0ZTQTNhUUczaUJWMkE_dmVyc2lvbj0x/output/preview1.png",
+          "resolution": [100, 100],
+          "mime": "image/png",
+          "status": "success"
+        },
+        {
+          "guid": "3f6c118d-f551-7bf0-03c9-8548d26c9772",
+          "type": "resource",
+          "role": "thumbnail",
+          "urn": "urn:adsk.viewing:fs.file:dXJuOmFkc2sud2lwcHJvZDpmcy5maWxlOnZmLjZsRThNSjZuU0ZTQTNhUUczaUJWMkE_dmVyc2lvbj0x/output/preview2.png",
+          "resolution": [200, 200],
+          "mime": "image/png",
+          "status": "success"
+        },
+        {
+          "guid": "4e751806-0920-ce32-e9fd-47c3cec21536",
+          "type": "resource",
+          "role": "thumbnail",
+          "urn": "urn:adsk.viewing:fs.file:dXJuOmFkc2sud2lwcHJvZDpmcy5maWxlOnZmLjZsRThNSjZuU0ZTQTNhUUczaUJWMkE_dmVyc2lvbj0x/output/preview4.png",
+          "resolution": [400, 400],
+          "mime": "image/png",
+          "status": "success"
+        }
+      ]
+    }
+  ]
+}

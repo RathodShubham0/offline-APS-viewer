@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Progressive Web App</title>
+    <meta name="msapplication-TileColor" content="#af0a1a" />
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="shortcut icon" href="img/fav-16.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="img/fav-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="img/fav-16.png" />
+    <link rel="apple-touch-icon" href="img/fav-57.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="img/fav-114.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="img/fav-72.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="img/fav-144.png" />
+    <link rel="manifest" href="pwa-manifest.json" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://developer.api.autodesk.com/modelderivative/v2/viewers/style.min.css?v=v7.*"
+        type="text/css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <script language="JavaScript"
+        src="https://developer.api.autodesk.com/modelderivative/v2/viewers/viewer3D.min.js?v=v7.*"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <h4>Offline Viewer</h4>
+        <div class="toggle-container">
+            <label class="switch">
+                <input type="checkbox" id="modelToggle" onchange="handleToggle()">
+                <span class="slider round"></span>
+                <div id="status">Model Offline</div>
+            </label>
+            <button onclick="downloadSvfBundle()">Download Svf Bundle</button>
+        </div>
+    </nav>
+   
+    <!-- Main Content -->
+    <div id="home" class="viewer-container" style="margin: 0; height: 40vh;"></div>
+
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        .navbar {
+            background: linear-gradient(90deg, #2183f3, #21b1f3);
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: rgb(0, 0, 0);
+        }
+
+        
+        .toggle-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .toggle-container button {
+            background-color: #009cbe;
+            color: white;
+            padding: 10px 20px;
+            border-color: rgb(255, 255, 255); ;
+            cursor: pointer;
+            margin-left: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .toggle-container button:hover {
+            background-color: #0b356d;
+        }
+
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 34px;
+            margin-right: 10px;
+        }
+
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: .4s;
+            border-radius: 34px;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 26px;
+            width: 26px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+        }
+
+        input:checked+.slider {
+            background-color: #114d5c;
+        }
+
+        input:checked+.slider:before {
+            transform: translateX(26px);
+        }
+
+        #status {
+            margin-left: 10px;
+            font-weight: 500;
+        }
+
+        .viewer-container {
+            width: 90%;
+            height: 10px;
+            margin: 0 auto;
+        
+        }
+    </style>
+    <script>
+        var viewer = null;
+        const LOCAL_MODEL_PATH = "./svf_bundle/svf_file/bundle/output.svf";
+        const MODEL_URN = "dXJuOmFkc2sud2lwcHJvZDpmcy5maWxlOnZmLjZsRThNSjZuU0ZTQTNhUUczaUJWMkE_dmVyc2lvbj0x"; // Replace with your actual URN
+        const ACCESS_TOKEN = "eyJhbGciOiJSUzI1NiIsImtpZCI6IlhrUFpfSmhoXzlTYzNZS01oRERBZFBWeFowOF9SUzI1NiIsInBpLmF0bSI6ImFzc2MifQ.eyJzY29wZSI6WyJkYXRhOnJlYWQiXSwiY2xpZW50X2lkIjoiVGY0dU9Zc3ZNVjN4RWpBOHVpUUg1QWlYV01YR290Nm4xWFp5cGhFTFRKV1BxNHN6IiwiaXNzIjoiaHR0cHM6Ly9kZXZlbG9wZXIuYXBpLmF1dG9kZXNrLmNvbSIsImF1ZCI6Imh0dHBzOi8vYXV0b2Rlc2suY29tIiwianRpIjoiSE84SVZUcFlmOVB0a1R3bjkyeUE5RmpzNTIwQmhSY0tXSlNYRDF1V1c0UjBmbkJPM3FxNVBvWGQwcWw1dVNmYSIsImV4cCI6MTczNjM0OTg0OH0.Dn2sevHPrCQhlCvRgtOSbC3plT1fDiGe5DKDj6DyLTnewWWqDKGUyUsyXhTGzTi5ogPZ7cgBTwNEpbphZcBrBBc2Bn-7kOyPbvxihGNkPOToV3K6ZChrbdq-jVs3bLd-ktxTcQcB7uBBnevB6SC5of4iVXu7me18FDUKCz2gO5tabxlkV4z8J3SOP4edUqjSUfyuH7D6XAWJxXA1Rqsbmjim-GC65y4d60VrmaDHojY0WsdfU1LBIHIf6x0yXYLgh4p1GVHsmOiC-DnLv75R5-2XAwQMjqA8L5cDQNhBJKe2_oWsxvrqo-o634zvgWUmvxM9G3CSKx7evwT0_EQjxQ";
+
+        function downloadSvfBundle() {
+            const myHeaders = new Headers();
+            myHeaders.append("Content-Type", "application/json");
+
+            const raw = JSON.stringify({
+                "model_urn": MODEL_URN
+            });
+
+            const requestOptions = {
+                method: "POST",
+                headers: myHeaders,
+                body: raw,
+                redirect: "follow"
+            };
+
+            fetch("http://127.0.0.1:5000/download_svf_bundle", requestOptions)
+                .then((response) => response.text())
+                .then((result) => console.log(result))
+                .catch((error) => console.error(error));
+        }
+
+        function initViewer() {
+            var myViewerDiv = document.getElementById("home");
+            viewer = new Autodesk.Viewing.Private.GuiViewer3D(myViewerDiv);
+            loadLocalModel();
+        }
+
+        function loadLocalModel() {
+            var options = {
+                env: "Local",
+                document: LOCAL_MODEL_PATH
+            };
+
+            Autodesk.Viewing.Initializer(options, function () {
+                viewer.start(options.document, options);
+            });
+        }
+
+        function loadUrnModel() {
+            var options = {
+                env: 'AutodeskProduction',
+                accessToken: ACCESS_TOKEN
+            };
+
+            Autodesk.Viewing.Initializer(options, function () {
+                var urnDoc = 'urn:' + MODEL_URN;
+
+                Autodesk.Viewing.Document.load(urnDoc,
+                    // onLoadSuccess
+                    function (doc) {
+                        var viewables = doc.getRoot().search({ 'type': 'geometry' });
+                        if (viewables && viewables.length > 0) {
+                            viewer.loadDocumentNode(doc, viewables[0], {
+                                globalOffset: { x: 0, y: 0, z: 0 }
+                            }).then(function (result) {
+                                console.log('Model loaded successfully');
+                            }).catch(function (err) {
+                                console.error('Error loading model:', err);
+                            });
+                        } else {
+                            console.error('No viewable geometry found in document');
+                        }
+                    },
+                    // onLoadError
+                    function (errorCode, errorMsg) {
+                        console.error('Error loading document:', errorCode, errorMsg);
+                    },
+
+                );
+            });
+        }
+
+        function handleToggle() {
+            const toggle = document.getElementById('modelToggle');
+            const status = document.getElementById('status');
+            toggle.disabled = true;
+
+            try {
+                if (viewer) {
+                    viewer.tearDown();
+                    viewer.finish();
+
+                    var myViewerDiv = document.getElementById("home");
+                    viewer = new Autodesk.Viewing.Private.GuiViewer3D(myViewerDiv, {
+                        extensions: ['Autodesk.DocumentBrowser']
+                    });
+
+                    viewer.start();
+
+                    if (toggle.checked) {
+                        loadUrnModel();
+                        status.innerText = "Model: Online";
+                    } else {
+                        loadLocalModel();
+                        status.innerText = "Model: Offline";
+                    }
+                }
+            } catch (error) {
+                console.error('Error switching model:', error);
+            } finally {
+                toggle.disabled = false;
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            Autodesk.Viewing.Initializer({ env: 'Local' }, function () {
+                initViewer();
+            });
+        });
+    </script>
+</body>
+
+</html>
